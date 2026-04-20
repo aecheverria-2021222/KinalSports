@@ -1,0 +1,133 @@
+C:\Users\Informatica\Documents\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Persistence.deps.json
+C:\Users\Informatica\Documents\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Persistence.dll
+C:\Users\Informatica\Documents\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Persistence.pdb
+C:\Users\Informatica\Documents\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Domain.dll
+C:\Users\Informatica\Documents\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Domain.pdb
+C:\Users\Informatica\Documents\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.csproj.AssemblyReference.cache
+C:\Users\Informatica\Documents\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Informatica\Documents\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.AssemblyInfoInputs.cache
+C:\Users\Informatica\Documents\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.AssemblyInfo.cs
+C:\Users\Informatica\Documents\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\Informatica\Documents\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthServ.5D1D95C4.Up2Date
+C:\Users\Informatica\Documents\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.dll
+C:\Users\Informatica\Documents\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\refint\AuthService.Persistence.dll
+C:\Users\Informatica\Documents\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.pdb
+C:\Users\Informatica\Documents\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\ref\AuthService.Persistence.dll
+C:\Users\aleja\OneDrive\Documentos\Kinal 2026\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Persistence.deps.json
+C:\Users\aleja\OneDrive\Documentos\Kinal 2026\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Persistence.runtimeconfig.json
+C:\Users\aleja\OneDrive\Documentos\Kinal 2026\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Persistence.dll
+C:\Users\aleja\OneDrive\Documentos\Kinal 2026\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Persistence.pdb
+C:\Users\aleja\OneDrive\Documentos\Kinal 2026\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Application.dll
+C:\Users\aleja\OneDrive\Documentos\Kinal 2026\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Domain.dll
+C:\Users\aleja\OneDrive\Documentos\Kinal 2026\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Domain.pdb
+C:\Users\aleja\OneDrive\Documentos\Kinal 2026\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Application.pdb
+C:\Users\aleja\OneDrive\Documentos\Kinal 2026\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.csproj.AssemblyReference.cache
+C:\Users\aleja\OneDrive\Documentos\Kinal 2026\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aleja\OneDrive\Documentos\Kinal 2026\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.AssemblyInfoInputs.cache
+C:\Users\aleja\OneDrive\Documentos\Kinal 2026\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.AssemblyInfo.cs
+C:\Users\aleja\OneDrive\Documentos\Kinal 2026\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\aleja\OneDrive\Documentos\Kinal 2026\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthServ.5D1D95C4.Up2Date
+C:\Users\aleja\OneDrive\Documentos\Kinal 2026\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.dll
+C:\Users\aleja\OneDrive\Documentos\Kinal 2026\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\refint\AuthService.Persistence.dll
+C:\Users\aleja\OneDrive\Documentos\Kinal 2026\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.pdb
+C:\Users\aleja\OneDrive\Documentos\Kinal 2026\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.genruntimeconfig.cache
+C:\Users\aleja\OneDrive\Documentos\Kinal 2026\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\ref\AuthService.Persistence.dll
+C:\Users\Informatica\Documents\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Persistence.runtimeconfig.json
+C:\Users\Informatica\Documents\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Application.dll
+C:\Users\Informatica\Documents\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Application.pdb
+C:\Users\Informatica\Documents\IN6AM\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.genruntimeconfig.cache
+C:\Users\Informatica\Documents\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Persistence.deps.json
+C:\Users\Informatica\Documents\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Persistence.runtimeconfig.json
+C:\Users\Informatica\Documents\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Persistence.dll
+C:\Users\Informatica\Documents\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Persistence.pdb
+C:\Users\Informatica\Documents\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Application.dll
+C:\Users\Informatica\Documents\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Domain.dll
+C:\Users\Informatica\Documents\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Domain.pdb
+C:\Users\Informatica\Documents\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Application.pdb
+C:\Users\Informatica\Documents\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.csproj.AssemblyReference.cache
+C:\Users\Informatica\Documents\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Informatica\Documents\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.AssemblyInfoInputs.cache
+C:\Users\Informatica\Documents\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.AssemblyInfo.cs
+C:\Users\Informatica\Documents\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\Informatica\Documents\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthServ.5D1D95C4.Up2Date
+C:\Users\Informatica\Documents\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.dll
+C:\Users\Informatica\Documents\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\refint\AuthService.Persistence.dll
+C:\Users\Informatica\Documents\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.pdb
+C:\Users\Informatica\Documents\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.genruntimeconfig.cache
+C:\Users\Informatica\Documents\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\ref\AuthService.Persistence.dll
+C:\Users\Informatica\Documents\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Persistence.deps.json
+C:\Users\Informatica\Documents\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Persistence.runtimeconfig.json
+C:\Users\Informatica\Documents\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Persistence.dll
+C:\Users\Informatica\Documents\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Persistence.pdb
+C:\Users\Informatica\Documents\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Application.dll
+C:\Users\Informatica\Documents\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Domain.dll
+C:\Users\Informatica\Documents\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Domain.pdb
+C:\Users\Informatica\Documents\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Application.pdb
+C:\Users\Informatica\Documents\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.csproj.AssemblyReference.cache
+C:\Users\Informatica\Documents\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Informatica\Documents\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.AssemblyInfoInputs.cache
+C:\Users\Informatica\Documents\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.AssemblyInfo.cs
+C:\Users\Informatica\Documents\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\Informatica\Documents\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthServ.5D1D95C4.Up2Date
+C:\Users\Informatica\Documents\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.dll
+C:\Users\Informatica\Documents\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\refint\AuthService.Persistence.dll
+C:\Users\Informatica\Documents\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.pdb
+C:\Users\Informatica\Documents\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.genruntimeconfig.cache
+C:\Users\Informatica\Documents\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\ref\AuthService.Persistence.dll
+C:\Users\Informatica\Pictures\Screenshots\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Persistence.deps.json
+C:\Users\Informatica\Pictures\Screenshots\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Persistence.runtimeconfig.json
+C:\Users\Informatica\Pictures\Screenshots\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Persistence.dll
+C:\Users\Informatica\Pictures\Screenshots\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Persistence.pdb
+C:\Users\Informatica\Pictures\Screenshots\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Application.dll
+C:\Users\Informatica\Pictures\Screenshots\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Domain.dll
+C:\Users\Informatica\Pictures\Screenshots\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Domain.pdb
+C:\Users\Informatica\Pictures\Screenshots\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Application.pdb
+C:\Users\Informatica\Pictures\Screenshots\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.csproj.AssemblyReference.cache
+C:\Users\Informatica\Pictures\Screenshots\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Informatica\Pictures\Screenshots\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.AssemblyInfoInputs.cache
+C:\Users\Informatica\Pictures\Screenshots\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.AssemblyInfo.cs
+C:\Users\Informatica\Pictures\Screenshots\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\Informatica\Pictures\Screenshots\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthServ.5D1D95C4.Up2Date
+C:\Users\Informatica\Pictures\Screenshots\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.dll
+C:\Users\Informatica\Pictures\Screenshots\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\refint\AuthService.Persistence.dll
+C:\Users\Informatica\Pictures\Screenshots\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.pdb
+C:\Users\Informatica\Pictures\Screenshots\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.genruntimeconfig.cache
+C:\Users\Informatica\Pictures\Screenshots\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\ref\AuthService.Persistence.dll
+C:\Users\xsbra\OneDrive\Documentos\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Persistence.deps.json
+C:\Users\xsbra\OneDrive\Documentos\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Persistence.runtimeconfig.json
+C:\Users\xsbra\OneDrive\Documentos\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Persistence.dll
+C:\Users\xsbra\OneDrive\Documentos\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Persistence.pdb
+C:\Users\xsbra\OneDrive\Documentos\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Application.dll
+C:\Users\xsbra\OneDrive\Documentos\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Domain.dll
+C:\Users\xsbra\OneDrive\Documentos\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Domain.pdb
+C:\Users\xsbra\OneDrive\Documentos\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Application.pdb
+C:\Users\xsbra\OneDrive\Documentos\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.csproj.AssemblyReference.cache
+C:\Users\xsbra\OneDrive\Documentos\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\xsbra\OneDrive\Documentos\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.AssemblyInfoInputs.cache
+C:\Users\xsbra\OneDrive\Documentos\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.AssemblyInfo.cs
+C:\Users\xsbra\OneDrive\Documentos\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\xsbra\OneDrive\Documentos\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthServ.5D1D95C4.Up2Date
+C:\Users\xsbra\OneDrive\Documentos\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.dll
+C:\Users\xsbra\OneDrive\Documentos\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\refint\AuthService.Persistence.dll
+C:\Users\xsbra\OneDrive\Documentos\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.pdb
+C:\Users\xsbra\OneDrive\Documentos\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.genruntimeconfig.cache
+C:\Users\xsbra\OneDrive\Documentos\IN6AM 176\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\ref\AuthService.Persistence.dll
+C:\Users\Informatica\Documents\IN6AM 190\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Persistence.deps.json
+C:\Users\Informatica\Documents\IN6AM 190\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Persistence.runtimeconfig.json
+C:\Users\Informatica\Documents\IN6AM 190\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Persistence.dll
+C:\Users\Informatica\Documents\IN6AM 190\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Persistence.pdb
+C:\Users\Informatica\Documents\IN6AM 190\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Application.dll
+C:\Users\Informatica\Documents\IN6AM 190\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Domain.dll
+C:\Users\Informatica\Documents\IN6AM 190\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Domain.pdb
+C:\Users\Informatica\Documents\IN6AM 190\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\bin\Debug\net8.0\AuthService.Application.pdb
+C:\Users\Informatica\Documents\IN6AM 190\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.csproj.AssemblyReference.cache
+C:\Users\Informatica\Documents\IN6AM 190\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Informatica\Documents\IN6AM 190\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.AssemblyInfoInputs.cache
+C:\Users\Informatica\Documents\IN6AM 190\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.AssemblyInfo.cs
+C:\Users\Informatica\Documents\IN6AM 190\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\Informatica\Documents\IN6AM 190\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthServ.5D1D95C4.Up2Date
+C:\Users\Informatica\Documents\IN6AM 190\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.dll
+C:\Users\Informatica\Documents\IN6AM 190\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\refint\AuthService.Persistence.dll
+C:\Users\Informatica\Documents\IN6AM 190\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.pdb
+C:\Users\Informatica\Documents\IN6AM 190\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\AuthService.Persistence.genruntimeconfig.cache
+C:\Users\Informatica\Documents\IN6AM 190\KinalSports\authentication-service\auth-service\src\AuthService.Persistence\obj\Debug\net8.0\ref\AuthService.Persistence.dll
