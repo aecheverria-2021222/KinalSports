@@ -4025,11 +4025,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Informatica\\Documents\\IN6AM\\KinalSports\\authentication-service\\auth-service\\src\\AuthService.Application\\AuthService.Application.csproj",
+      "projectUniqueName": "C:\\gitIN6AM\\KinalSports\\authentication-service\\auth-service\\src\\AuthService.Application\\AuthService.Application.csproj",
       "projectName": "AuthService.Application",
-      "projectPath": "C:\\Users\\Informatica\\Documents\\IN6AM\\KinalSports\\authentication-service\\auth-service\\src\\AuthService.Application\\AuthService.Application.csproj",
+      "projectPath": "C:\\gitIN6AM\\KinalSports\\authentication-service\\auth-service\\src\\AuthService.Application\\AuthService.Application.csproj",
       "packagesPath": "C:\\Users\\Informatica\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Informatica\\Documents\\IN6AM\\KinalSports\\authentication-service\\auth-service\\src\\AuthService.Application\\obj\\",
+      "outputPath": "C:\\gitIN6AM\\KinalSports\\authentication-service\\auth-service\\src\\AuthService.Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Informatica\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -4044,8 +4044,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Informatica\\Documents\\IN6AM\\KinalSports\\authentication-service\\auth-service\\src\\AuthService.Domain\\AuthService.Domain.csproj": {
-              "projectPath": "C:\\Users\\Informatica\\Documents\\IN6AM\\KinalSports\\authentication-service\\auth-service\\src\\AuthService.Domain\\AuthService.Domain.csproj"
+            "C:\\gitIN6AM\\KinalSports\\authentication-service\\auth-service\\src\\AuthService.Domain\\AuthService.Domain.csproj": {
+              "projectPath": "C:\\gitIN6AM\\KinalSports\\authentication-service\\auth-service\\src\\AuthService.Domain\\AuthService.Domain.csproj"
             }
           }
         }
@@ -4121,5 +4121,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.417/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"MailKit\" 4.13.0 tiene una vulnerabilidad de gravedad moderada conocida, https://github.com/advisories/GHSA-9j88-vvj5-vhgr",
+      "libraryId": "MailKit",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

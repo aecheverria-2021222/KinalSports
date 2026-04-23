@@ -16,7 +16,7 @@ export const createField = async (formData) => {
 
 export const updateField = async (id , data) =>{
     return await axiosAdmin.put(`/fields/${id}`,data,{
-        headers:{"Content_Type":"multipart/form-data"}
+        headers:{"Content-Type":"multipart/form-data"}
     })
 }
 
