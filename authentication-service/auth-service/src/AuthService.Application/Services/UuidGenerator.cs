@@ -2,7 +2,7 @@ using System.Security.Cryptography;
 using System.Text;
 
 namespace AuthService.Application.Services;
-/*Generar ids aleatorios a base de un alfabeto y aprovechando vammos a validar el id*/
+
 public static class UuidGenerator
 {
     // Caracteres seguros (sin 0, O, I, l para evitar confusión)

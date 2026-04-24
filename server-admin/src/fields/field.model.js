@@ -38,7 +38,7 @@ const fieldSchema = new Schema(
     },
     photo: {
       type: String,
-      default: 'fields/kinal_sports_rljcha',
+      default: 'https://res.cloudinary.com/dpdpiqtmu/image/upload/v1771004279/kinal_sports_in6am/fields/j9fr1ebmfxw1to7llzpy.jpg',
     },
     isActive: {
       type: Boolean,

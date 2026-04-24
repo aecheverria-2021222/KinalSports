@@ -1017,7 +1017,6 @@
         }
       },
       "System.Collections.Immutable/7.0.0": {},
-      "System.ComponentModel.Annotations/5.0.0": {},
       "System.Composition/7.0.0": {
         "dependencies": {
           "System.Composition.AttributedModel": "7.0.0",
@@ -1503,9 +1502,6 @@
         }
       },
       "AuthService.Domain/1.0.0": {
-        "dependencies": {
-          "System.ComponentModel.Annotations": "5.0.0"
-        },
         "runtime": {
           "AuthService.Domain.dll": {
             "assemblyVersion": "1.0.0",
@@ -1517,7 +1513,6 @@
         "dependencies": {
           "AuthService.Application": "1.0.0",
           "AuthService.Domain": "1.0.0",
-          "EFCore.NamingConventions": "9.0.0",
           "Microsoft.EntityFrameworkCore": "9.0.9",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.4"
         },
@@ -2144,13 +2139,6 @@
       "sha512": "sha512-dQPcs0U1IKnBdRDBkrCTi1FoajSTBzLcVTpjO4MBCMC7f4pDOIPzgBoX8JjG7X6uZRJ8EBxsi8+DR1JuwjnzOQ==",
       "path": "system.collections.immutable/7.0.0",
       "hashPath": "system.collections.immutable.7.0.0.nupkg.sha512"
-    },
-    "System.ComponentModel.Annotations/5.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-dMkqfy2el8A8/I76n2Hi1oBFEbG1SfxD2l5nhwXV3XjlnOmwxJlQbYpJH4W51odnU9sARCSAgv7S3CyAFMkpYg==",
-      "path": "system.componentmodel.annotations/5.0.0",
-      "hashPath": "system.componentmodel.annotations.5.0.0.nupkg.sha512"
     },
     "System.Composition/7.0.0": {
       "type": "package",

@@ -1,37 +1,28 @@
-using System;
 using System.ComponentModel.DataAnnotations;
-using AuthService.Domain.Constants;
 
 namespace AuthService.Domain.Entities;
 
-/*Sirve para ser pivote entre user y rol*/
 public class UserRole
 {
     [Key]
     [MaxLength(16)]
-    public string Id{get; set;}= string.Empty;
+    public string Id { get; set; } = string.Empty;
 
-    /*ID de User*/
-    [Key]
+    [Required]
     [MaxLength(16)]
-    public string UserId{get; set;}= string.Empty;
+    public string UserId { get; set; } = string.Empty;
 
-    /*ID de Rol*/
-    [Key]
+    [Required]
     [MaxLength(16)]
-    public string RoleId {get; set;}= string.Empty;
+    public string RoleId { get; set; } = string.Empty;
 
-    /*Cuando se crea o se edita*/ 
-    public DateTime CreatedAt {get; set;} = DateTime.UtcNow;
+    [Required]
+    public User User { get; set; } = null!;
 
-    public DateTime UpdatedAt {get; set;} = DateTime.UtcNow;
+    [Required]
+    public Role Role { get; set; } = null!;
 
-    /*Hacer referencia hacia la otra entidad*/
-    /*Cuando sea uno es objeto, si es muchos es array*/
-
-    /*UserRol tiene que recibir objeto de tipo User (Relacion Cruzada)*/
-    public User User {get; set;} = null!;/*El ! Puede o no puede ser null, osea caso omiso*/
-
-    public Role Role {get; set;} = null!;
-
+    // Timestamps to align with DB schema (NOT NULL)
+    public DateTime CreatedAt { get; set; }
+    public DateTime UpdatedAt { get; set; }
 }

@@ -10,7 +10,6 @@
         "dependencies": {
           "AuthService.Application": "1.0.0",
           "AuthService.Domain": "1.0.0",
-          "EFCore.NamingConventions": "9.0.0",
           "Microsoft.EntityFrameworkCore": "9.0.9",
           "Microsoft.EntityFrameworkCore.Design": "9.0.9",
           "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
@@ -38,19 +37,6 @@
           "lib/netstandard2.0/CloudinaryDotNet.dll": {
             "assemblyVersion": "1.27.7.0",
             "fileVersion": "1.27.7.0"
-          }
-        }
-      },
-      "EFCore.NamingConventions/9.0.0": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "9.0.9",
-          "Microsoft.EntityFrameworkCore.Relational": "9.0.9",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.9"
-        },
-        "runtime": {
-          "lib/net8.0/EFCore.NamingConventions.dll": {
-            "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.0.0"
           }
         }
       },
@@ -759,7 +745,6 @@
         }
       },
       "System.Collections.Immutable/7.0.0": {},
-      "System.ComponentModel.Annotations/5.0.0": {},
       "System.Composition/7.0.0": {
         "dependencies": {
           "System.Composition.AttributedModel": "7.0.0",
@@ -1245,9 +1230,6 @@
         }
       },
       "AuthService.Domain/1.0.0": {
-        "dependencies": {
-          "System.ComponentModel.Annotations": "5.0.0"
-        },
         "runtime": {
           "AuthService.Domain.dll": {
             "assemblyVersion": "1.0.0",
@@ -1276,13 +1258,6 @@
       "sha512": "sha512-xPpakjmJuj0z1MzcdCPoCQLUtWynaynQGzCmn9VlV01O8fWW02e2NUQzW1NAsqBUTMUuJozAKc1i1Oj3YvVSig==",
       "path": "cloudinarydotnet/1.27.7",
       "hashPath": "cloudinarydotnet.1.27.7.nupkg.sha512"
-    },
-    "EFCore.NamingConventions/9.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-heKIYzPdEWx+Ba4xuG6jfEssW9rEi7I0lX38eoN7wo7qgg9uw7nn8UEmDQfwGEYPzSDpetCVANnDr5tqt2Asjg==",
-      "path": "efcore.namingconventions/9.0.0",
-      "hashPath": "efcore.namingconventions.9.0.0.nupkg.sha512"
     },
     "FluentValidation/12.0.0": {
       "type": "package",
@@ -1710,13 +1685,6 @@
       "sha512": "sha512-dQPcs0U1IKnBdRDBkrCTi1FoajSTBzLcVTpjO4MBCMC7f4pDOIPzgBoX8JjG7X6uZRJ8EBxsi8+DR1JuwjnzOQ==",
       "path": "system.collections.immutable/7.0.0",
       "hashPath": "system.collections.immutable.7.0.0.nupkg.sha512"
-    },
-    "System.ComponentModel.Annotations/5.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-dMkqfy2el8A8/I76n2Hi1oBFEbG1SfxD2l5nhwXV3XjlnOmwxJlQbYpJH4W51odnU9sARCSAgv7S3CyAFMkpYg==",
-      "path": "system.componentmodel.annotations/5.0.0",
-      "hashPath": "system.componentmodel.annotations.5.0.0.nupkg.sha512"
     },
     "System.Composition/7.0.0": {
       "type": "package",

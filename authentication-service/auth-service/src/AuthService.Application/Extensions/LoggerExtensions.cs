@@ -1,7 +1,6 @@
 using System;
 using Microsoft.Extensions.Logging;
 
-/*Configuracion de un logger, manejo persomalizado de consola*/
 namespace AuthService.Application.Extensions;
 
 public static partial class LoggerExtensions

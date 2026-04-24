@@ -1,6 +1,5 @@
 namespace AuthService.Application.Exceptions;
 
-/*Para manejar errores*/
 public static class ErrorCodes
 {
     public const string EMAIL_ALREADY_EXISTS = "EMAIL_ALREADY_EXISTS";

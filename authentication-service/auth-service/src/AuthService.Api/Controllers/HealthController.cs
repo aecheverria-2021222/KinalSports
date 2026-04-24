@@ -1,5 +1,3 @@
-using System;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AuthService.Api.Controllers;
@@ -14,10 +12,10 @@ public class HealthController : ControllerBase
         var response = new
         {
             status = "Healthy",
-            timestamp = DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss.fffz"),
-            service = "Kinal Sports AuthService",
-
+            timestamp = DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss.fffZ"),
+            service = "KinalSports Authentication Service"
         };
+
         return Ok(response);
     }
 }

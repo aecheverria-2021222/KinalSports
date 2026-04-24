@@ -4,7 +4,8 @@ namespace AuthService.Domain.Interfaces;
 
 public interface IUserRepository
 {
-    Task<User> CreateAsync(User user);/**/
+    Task<User> CreateAsync(User user);
+    Task<IEnumerable<User>> GetUsersAsync();
     Task<User> GetByIdAsync(string id);
     Task<User?> GetByEmailAsync(string email);
     Task<User?> GetByUsernameAsync(string username);

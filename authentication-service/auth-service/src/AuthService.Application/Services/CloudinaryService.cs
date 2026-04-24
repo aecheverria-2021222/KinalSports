@@ -2,6 +2,7 @@ using AuthService.Application.Interfaces;
 using CloudinaryDotNet;
 using CloudinaryDotNet.Actions;
 using Microsoft.Extensions.Configuration;
+
 namespace AuthService.Application.Services;
 
 public class CloudinaryService(IConfiguration configuration) : ICloudinaryService
@@ -18,30 +19,25 @@ public class CloudinaryService(IConfiguration configuration) : ICloudinaryServic
         {
             using var stream = new MemoryStream(imageFile.Data);
 
-            var folder = configuration["CloudinarySettings:Folder"] ?? "auth_service/profiles";
+            var folder = configuration["CloudinarySettings:Folder"]
+                         ?? "auth_service/profiles";
+
+            var cleanName = Path.GetFileNameWithoutExtension(fileName);
+
+            var publicId = $"{folder}/{cleanName}";
+
             var uploadParams = new ImageUploadParams
             {
                 File = new FileDescription(imageFile.FileName, stream),
-                PublicId = $"{folder}/{fileName}",
-                Folder = folder,
-                Transformation = new Transformation()
-                    .Width(400)
-                    .Height(400)
-                    .Crop("fill")
-                    .Gravity("face")
-                    .Quality("auto")
-                    .FetchFormat("auto")
+                PublicId = publicId,
             };
 
             var uploadResult = await _cloudinary.UploadAsync(uploadParams);
 
             if (uploadResult.Error != null)
-            {
                 throw new InvalidOperationException($"Error uploading image: {uploadResult.Error.Message}");
-            }
 
-            // Retornar sólo el nombre variable (filename) para almacenar en la DB
-            return fileName;
+            return $"v{uploadResult.Version}/{uploadResult.PublicId}.{uploadResult.Format}";
         }
         catch (Exception ex)
         {
@@ -49,17 +45,30 @@ public class CloudinaryService(IConfiguration configuration) : ICloudinaryServic
         }
     }
 
-    public async Task<bool> DeleteImageAsync(string publicId)
+    public async Task<bool> DeleteImageAsync(string fileName)
     {
         try
         {
+            var folder = configuration["CloudinarySettings:Folder"]
+                         ?? "auth_service/profiles";
+
+            var withoutVersion = fileName.Contains('/')
+                ? string.Join('/', fileName.Split('/').Skip(1))
+                : fileName;
+
+            var withoutExtension = Path.Combine(
+                Path.GetDirectoryName(withoutVersion) ?? "",
+                Path.GetFileNameWithoutExtension(withoutVersion)
+            ).Replace("\\", "/");
+
+
             var deleteParams = new DelResParams
             {
-                PublicIds = [publicId]
+                PublicIds = [withoutExtension]
             };
 
             var result = await _cloudinary.DeleteResourcesAsync(deleteParams);
-            return result.Deleted?.ContainsKey(publicId) == true;
+            return result.Deleted?.ContainsKey(withoutExtension) == true;
         }
         catch
         {
@@ -67,33 +76,40 @@ public class CloudinaryService(IConfiguration configuration) : ICloudinaryServic
         }
     }
 
+
     public string GetDefaultAvatarUrl()
     {
-
-        var defaultPath = configuration["CloudinarySettings:DefaultAvatarPath"] ?? "default-avatar_ewzxwx.png";
-        if (defaultPath.Contains('/')) return defaultPath.Split('/').Last();
-        return defaultPath;
+        var baseUrl = configuration["CloudinarySettings:BaseUrl"] ?? "https://res.cloudinary.com/dpdpiqtmu/image/upload/";
+        
+        // Colocamos el nombre real de tu archivo
+        var defaultPath = configuration["CloudinarySettings:DefaultAvatarPath"] ?? "v1769785931/avatarDefault-1749508519496.png";
+        
+        if (!defaultPath.EndsWith(".png"))
+            defaultPath += ".png";
+            
+        return $"{baseUrl}{defaultPath}";
     }
 
-    public string GetFullImageUrl(string imagePath)
+    public string GetFullImageUrl(string fileName)
     {
-        var baseUrl = configuration["CloudinarySettings:BaseUrl"] ?? "https://res.cloudinary.com/dug3apxt3/image/upload/";
-        var folder = configuration["CloudinarySettings:Folder"] ?? "auth_service/profiles";
-        var defaultPath = configuration["CloudinarySettings:DefaultAvatarPath"] ?? "default-avatar_ewzxwx.png";
+        var baseUrl = configuration["CloudinarySettings:BaseUrl"]
+                      ?? "https://res.cloudinary.com/dpdpiqtmu/image/upload/";
 
-        var pathToUse = string.IsNullOrWhiteSpace(imagePath) ? defaultPath : imagePath;
-        if (!pathToUse.Contains('/')) pathToUse = $"{folder}/{pathToUse}";
+        if (string.IsNullOrWhiteSpace(fileName))
+        {
+            // Construimos exactamente la URL que confirmaste que funciona
+            var version = "v1769785931";
+            var fileNameOnly = "avatarDefault-1749508519496.png"; 
 
-        return $"{baseUrl}{pathToUse}";
+            // NOTA: Si Cloudinary te llega a exigir la carpeta en el futuro, 
+            // solo cambias la línea de arriba por:
+            // var fileNameOnly = "auth_ks_in6am/profiles/avatarDefault-1749508519496.png";
+
+            return $"{baseUrl}{version}/{fileNameOnly}";
+        }
+
+        // Si el nombre ya tiene extensión, respétala (imagen personalizada)
+        return $"{baseUrl}w_400,h_400,c_fill,g_auto,q_auto,f_auto/{fileName}";
     }
 
-    private static string SanitizeFileName(string fileName)
-    {
-        return fileName
-            .Trim()
-            .Replace(" ", "_")
-            .Replace("-", "_")
-            .ToLowerInvariant();
-    }
 }
-

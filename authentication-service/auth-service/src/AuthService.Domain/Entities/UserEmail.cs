@@ -1,4 +1,3 @@
-using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace AuthService.Domain.Entities;
@@ -7,19 +6,20 @@ public class UserEmail
 {
     [Key]
     [MaxLength(16)]
-    public string Id {get; set;} = string.Empty;
-
-    [Key]
-    [MaxLength(16)]
-    public string UserId {get; set;} = string.Empty;
+    public string Id { get; set; } = string.Empty;
 
     [Required]
-    public bool EmailVerified {get; set;} = false;
+    [MaxLength(16)]
+    public string UserId { get; set; } = string.Empty;
 
-    [MaxLength(255)]
-    public string? EmailVerificationToken {get; set;}
+    [Required]
+    public bool EmailVerified { get; set; } = false;
 
-    public DateTime? EmailVerificationTokenExpiry {get; set;}
+    [MaxLength(256)]
+    public string? EmailVerificationToken { get; set; }
 
-    public User User {get; set;} = null!;
+    public DateTime? EmailVerificationTokenExpiry { get; set; }
+
+    [Required]
+    public User User { get; set; } = null!;
 }

@@ -25,9 +25,4 @@
     <ProjectReference Include="..\AuthService.Persistence\AuthService.Persistence.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Extensions\" />
-  </ItemGroup>
-
 </Project>

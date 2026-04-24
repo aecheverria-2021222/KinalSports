@@ -1,7 +1,11 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { login as loginRequest } from "../../../shared/apis";
+import { 
+  login as loginRequest,
+  register as registerRequest,
+} from "../../../shared/apis";
 import { showError } from "../../../shared/utils/toast.js";
+import { LoaderIcon } from "react-hot-toast";
 
 export const useAuthStore = create(
   persist((set, get) => ({
@@ -90,6 +94,22 @@ export const useAuthStore = create(
             return {success: false, error: message}
         }
         },
+
+        register:async (formData) => {
+          try {
+            set({loading: true, error: null});
+            const { data } = await registerRequest(formData);
+            set({loading: false})
+            return{
+              success: true,
+              emailVerificationRequired: data?.emailVerificationRequired
+            }
+          } catch (err) {
+              const message = err.response?.data?.message || "Error al Registar Usuario";
+              set({error: message, loading: false});
+              return {success: false, error: message}
+          }
+        }
     }),
   {name: "auth-KS-IN6AM"},
   ),

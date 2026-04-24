@@ -38,7 +38,7 @@ export const createFieldRecord = async ({ fieldData, file }) => {
   if (file) {
     data.photo = file.path; // Guardar la ruta relativa del archivo subido
   } else {
-    data.photo = 'kinal_sports_in6am/fields/kinal_sports_rljcha';
+    data.photo = 'https://res.cloudinary.com/dpdpiqtmu/image/upload/v1771004279/kinal_sports_in6am/fields/j9fr1ebmfxw1to7llzpy.jpg';
   }
 
   const field = new Field(data);

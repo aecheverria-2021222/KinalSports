@@ -1,12 +1,9 @@
-using System;
-
 namespace AuthService.Domain.Constants;
 
-public class RoleConstants
+public static class RoleConstants
 {
-    public const string USER_ROLE = "USER_ROLE";
     public const string ADMIN_ROLE = "ADMIN_ROLE";
+    public const string USER_ROLE = "USER_ROLE";
 
-    /*Array para limitar la cantidad de roles*/
-    public static readonly string[]AllowedRoles = [USER_ROLE, ADMIN_ROLE];
+    public static readonly string[] AllowedRoles = [ADMIN_ROLE, USER_ROLE];
 }
