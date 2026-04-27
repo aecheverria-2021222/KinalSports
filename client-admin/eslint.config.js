@@ -1,3 +1,4 @@
+import eslintConfigPrettier from 'eslint-config-prettier'
 import js from '@eslint/js'
 import globals from 'globals'
 import reactHooks from 'eslint-plugin-react-hooks'
@@ -12,6 +13,7 @@ export default defineConfig([
       js.configs.recommended,
       reactHooks.configs.flat.recommended,
       reactRefresh.configs.vite,
+      eslintConfigPrettier,
     ],
     languageOptions: {
       ecmaVersion: 2020,

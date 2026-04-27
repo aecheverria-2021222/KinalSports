@@ -1,0 +1,13 @@
+[2026-04-27 07:24:51 INF] Checking database connection... {"SourceContext":"Program"}
+[2026-04-27 07:24:51 INF] Database ready. Running seed data... {"SourceContext":"Program"}
+[2026-04-27 07:24:51 INF] Database initialization completed successfully {"SourceContext":"Program"}
+[2026-04-27 07:24:51 INF] AuthService API is running at http://localhost:5001. Health endpoint: http://localhost:5001/health {"SourceContext":"Program"}
+[2026-04-27 07:29:15 INF] HTTP OPTIONS /api/v1/auth/login responded 204 in 2.3303 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL4C3T7466H:00000001","ConnectionId":"0HNL4C3T7466H"}
+[2026-04-27 07:29:16 INF] User login succeeded {"EventId":{"Id":1002,"Name":"LogUserLoggedIn"},"SourceContext":"AuthService.Application.Services.AuthService","ActionId":"17b021d2-292e-4767-8db7-ca1736ff718c","ActionName":"AuthService.Api.Controllers.AuthController.Login (AuthService.Api)","RequestId":"0HNL4C3T7466H:00000002","RequestPath":"/api/v1/auth/login","ConnectionId":"0HNL4C3T7466H"}
+[2026-04-27 07:29:16 INF] HTTP POST /api/v1/auth/login responded 200 in 718.8482 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL4C3T7466H:00000002","ConnectionId":"0HNL4C3T7466H"}
+[2026-04-27 07:29:18 INF] HTTP GET /api/v1/auth/users responded 401 in 5.7963 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL4C3T7466H:00000003","ConnectionId":"0HNL4C3T7466H"}
+[2026-04-27 07:29:18 INF] HTTP OPTIONS /api/v1/auth/refresh responded 204 in 0.0741 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL4C3T7466H:00000004","ConnectionId":"0HNL4C3T7466H"}
+[2026-04-27 07:29:18 INF] HTTP POST /api/v1/auth/refresh responded 200 in 79.4495 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL4C3T7466H:00000005","ConnectionId":"0HNL4C3T7466H"}
+[2026-04-27 07:29:18 INF] HTTP OPTIONS /api/v1/auth/users responded 204 in 0.0519 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL4C3T7466H:00000006","ConnectionId":"0HNL4C3T7466H"}
+[2026-04-27 07:29:18 INF] HTTP GET /api/v1/auth/users responded 200 in 61.1119 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL4C3T7466H:00000007","ConnectionId":"0HNL4C3T7466H"}
+[2026-04-27 07:33:15 INF] HTTP GET /api/v1/auth/users responded 401 in 1.3480 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNL4C3T7466I:00000001","ConnectionId":"0HNL4C3T7466I"}
