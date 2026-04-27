@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { AuthPage } from '../../features/auth/pages/AuthPage.jsx';
+import {VerifyEmailPage} from '../../features/auth/pages/VerifyEmailPage.jsx';
 import { DashboardPage } from '../layouts/DashboardPage.jsx';
 import { ProtectedRoutes } from './ProtectedRoutes.jsx';
 import { UnauthorizedPage } from '../../features/auth/pages/UnauthorizedPage.jsx';
@@ -15,6 +16,7 @@ export const AppRoutes = () => {
     <Routes>
       <Route path='/' element={<AuthPage />} />
       <Route path='/unauthorized' element={<UnauthorizedPage />} />
+      <Route path='/verify-email' element={<VerifyEmailPage />} />
       <Route
         path='/dashboard/*'
         element={

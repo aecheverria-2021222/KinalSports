@@ -77,11 +77,11 @@ export const useAuthStore = create(
 
           set({
             user: data.userDetails,
-            //token: data.accessToken,
-            token: data.token,
+            token: data.accessToken,
+            //token: data.token,
             refreshToken: data.refreshToken,
-            //expiresAt: data.expiresIn,
-            expiresAt: data.expiresAt,
+            expiresAt: data.expiresIn,
+            //expiresAt: data.expiresAt,
             isAuthenticated: true,
             loading: false,
           });

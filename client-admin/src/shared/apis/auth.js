@@ -14,3 +14,7 @@ export const register = async (data) => {
     headers: { 'Content-Type': 'multipart/form-data' },
   });
 };
+
+export const verifyEmail = async (token) => {
+    return await axiosAuth.post('/auth/verify-email', {token}); 
+};
