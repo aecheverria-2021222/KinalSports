@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   --color-main-blue: #08316d;
@@ -8,36 +8,36 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
- 
+
   --main-blue: #08316d;
- 
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
- 
+
 @keyframes fadeIn {
   from {
     opacity: 0;
     transform: translateY(-6px);
   }
- 
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
- 
+
 .animate-fadeIn {
   animation: fadeIn 0.15s ease-out;
 }
- 
+
 .sidebar-underline {
   position: relative;
 }
 .sidebar-underline.active::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 16px;
   right: 16px;

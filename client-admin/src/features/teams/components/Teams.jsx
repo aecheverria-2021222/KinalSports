@@ -1,7 +1,3 @@
-
-
 export const Teams = () => {
-  return (
-    <div>Teams</div>
-  )
-}
+  return <div>Teams</div>;
+};

@@ -1,11 +1,11 @@
-import { useEffect, useMemo, useState } from "react";
-import { useUserManagementStore } from "../store/useUserManagementStore.js";
-import { useAuthStore } from "../../auth/store/authStore.js";
-import { Spinner } from "../../auth/components/Spinner.jsx";
-import { CreateUserModal } from "./CreateUserModal.jsx";
+import { useEffect, useMemo, useState } from 'react';
+import { useUserManagementStore } from '../store/useUserManagementStore.js';
+import { useAuthStore } from '../../auth/store/authStore.js';
+import { Spinner } from '../../auth/components/Spinner.jsx';
+import { CreateUserModal } from './CreateUserModal.jsx';
 //import { UserDetailModal } from "./UserDetailModal.jsx";
-import { showError } from "../../../shared/utils/toast.js";
-import { showSuccess } from "../../../shared/utils/toast.js";
+import { showError } from '../../../shared/utils/toast.js';
+import { showSuccess } from '../../../shared/utils/toast.js';
 const PAGE_SIZE = 8;
 export const Users = () => {
   // Solo lo necesario para listar
@@ -14,8 +14,8 @@ export const Users = () => {
   // const { updateUserRole } = useUserManagementStore();
   const registerUser = useAuthStore((state) => state.register);
   // const currentUser = useAuthStore((state) => state.user);
-  const [search, setSearch] = useState("");
-  const [roleFilter, setRoleFilter] = useState("ALL");
+  const [search, setSearch] = useState('');
+  const [roleFilter, setRoleFilter] = useState('ALL');
   const [page, setPage] = useState(1);
   // Estados de modales/edición (comentados porque no se usarán por ahora)
   const [openCreateModal, setOpenCreateModal] = useState(false);
@@ -32,17 +32,14 @@ export const Users = () => {
   const filteredUsers = useMemo(() => {
     const normalizedSearch = search.trim().toLowerCase();
     return users.filter((u) => {
-      const fullName = `${u.name || ""} ${u.surname || ""}`
-        .trim()
-        .toLowerCase();
-      const username = (u.username || "").toLowerCase();
-      const role = (u.role || "").toUpperCase();
+      const fullName = `${u.name || ''} ${u.surname || ''}`.trim().toLowerCase();
+      const username = (u.username || '').toLowerCase();
+      const role = (u.role || '').toUpperCase();
       const matchesSearch =
         !normalizedSearch ||
         fullName.includes(normalizedSearch) ||
         username.includes(normalizedSearch);
-      const matchesRole =
-        roleFilter === "ALL" ? true : role === roleFilter.toUpperCase();
+      const matchesRole = roleFilter === 'ALL' ? true : role === roleFilter.toUpperCase();
       return matchesSearch && matchesRole;
     });
   }, [users, search, roleFilter]);
@@ -71,41 +68,39 @@ export const Users = () => {
   const handleCreate = async (formData) => {
     const res = await registerUser(formData);
     if (res.success) {
-      showSuccess("Usuario creado. Se envió correo de verificación.");
+      showSuccess('Usuario creado. Se envió correo de verificación.');
       await getAllUsers(undefined, { force: true });
       return true;
     }
-    showError(res.error || "No se pudo crear el usuario");
+    showError(res.error || 'No se pudo crear el usuario');
     return false;
   };
   if (loading && users.length === 0) return <Spinner />;
   return (
-    <div className="p-4">
-      <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-6">
+    <div className='p-4'>
+      <div className='flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-6'>
         <div>
-          <h1 className="text-3xl font-bold text-main-blue">Usuarios</h1>
-          <p className="text-gray-500 text-sm">
-            Listado de usuarios registrados
-          </p>
+          <h1 className='text-3xl font-bold text-main-blue'>Usuarios</h1>
+          <p className='text-gray-500 text-sm'>Listado de usuarios registrados</p>
         </div>
         {/* Botón para crear usuario (comentado por ahora) */}
         <button
-          className="bg-main-blue px-4 py-2 rounded text-white hover:opacity-90 transition"
+          className='bg-main-blue px-4 py-2 rounded text-white hover:opacity-90 transition'
           onClick={() => setOpenCreateModal(true)}
         >
           + Agregar Usuario
         </button>
       </div>
-      <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-4 mb-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+      <div className='bg-white rounded-xl border border-gray-200 shadow-sm p-4 mb-4'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-3'>
           <input
             value={search}
             onChange={(e) => {
               setSearch(e.target.value);
               setPage(1);
             }}
-            placeholder="Buscar por nombre o username..."
-            className="md:col-span-2 w-full px-3 py-2 border rounded-lg"
+            placeholder='Buscar por nombre o username...'
+            className='md:col-span-2 w-full px-3 py-2 border rounded-lg'
           />
           <select
             value={roleFilter}
@@ -113,22 +108,22 @@ export const Users = () => {
               setRoleFilter(e.target.value);
               setPage(1);
             }}
-            className="w-full px-3 py-2 border rounded-lg"
+            className='w-full px-3 py-2 border rounded-lg'
           >
-            <option value="ALL">Todos los roles</option>
-            <option value="ADMIN_ROLE">ADMIN_ROLE</option>
-            <option value="USER_ROLE">USER_ROLE</option>
+            <option value='ALL'>Todos los roles</option>
+            <option value='ADMIN_ROLE'>ADMIN_ROLE</option>
+            <option value='USER_ROLE'>USER_ROLE</option>
           </select>
         </div>
       </div>
-      <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
-        <div className="overflow-x-auto">
-          <table className="min-w-full text-sm">
-            <thead className="bg-gray-50 text-gray-700">
+      <div className='bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden'>
+        <div className='overflow-x-auto'>
+          <table className='min-w-full text-sm'>
+            <thead className='bg-gray-50 text-gray-700'>
               <tr>
-                <th className="text-left px-4 py-3">Nombre</th>
-                <th className="text-left px-4 py-3">Username</th>
-                <th className="text-left px-4 py-3">Rol</th>
+                <th className='text-left px-4 py-3'>Nombre</th>
+                <th className='text-left px-4 py-3'>Username</th>
+                <th className='text-left px-4 py-3'>Rol</th>
                 {/* Acciones (editar) comentadas por ahora */}
                 {/* <th className="text-right px-4 py-3">Acciones</th> */}
               </tr>
@@ -137,7 +132,7 @@ export const Users = () => {
               {paginatedUsers.length === 0 ? (
                 <tr>
                   <td
-                    className="px-4 py-6 text-center text-gray-500"
+                    className='px-4 py-6 text-center text-gray-500'
                     // colSpan={4}
                     colSpan={3}
                   >
@@ -146,17 +141,18 @@ export const Users = () => {
                 </tr>
               ) : (
                 paginatedUsers.map((u) => (
-                  <tr key={u.id} className="border-t hover:bg-gray-50">
-                    <td className="px-4 py-3 font-medium text-gray-800">
-                      {[u.name, u.surname].filter(Boolean).join(" ") || "-"}
+                  <tr key={u.id} className='border-t hover:bg-gray-50'>
+                    <td className='px-4 py-3 font-medium text-gray-800'>
+                      {[u.name, u.surname].filter(Boolean).join(' ') || '-'}
                     </td>
-                    <td className="px-4 py-3 text-gray-700">@{u.username}</td>
-                    <td className="px-4 py-3">
+                    <td className='px-4 py-3 text-gray-700'>@{u.username}</td>
+                    <td className='px-4 py-3'>
                       <span
-                        className={`px-2 py-1 rounded-full text-xs font-semibold ${u.role === "ADMIN_ROLE"
-                            ? "bg-blue-100 text-blue-700"
-                            : "bg-gray-100 text-gray-700"
-                          }`}
+                        className={`px-2 py-1 rounded-full text-xs font-semibold ${
+                          u.role === 'ADMIN_ROLE'
+                            ? 'bg-blue-100 text-blue-700'
+                            : 'bg-gray-100 text-gray-700'
+                        }`}
                       >
                         {u.role}
                       </span>
@@ -178,29 +174,27 @@ export const Users = () => {
             </tbody>
           </table>
         </div>
-        <div className="flex items-center justify-between px-4 py-3 border-t bg-gray-50">
-          <p className="text-xs text-gray-600">
-            Mostrando{" "}
-            {(currentPage - 1) * PAGE_SIZE + (paginatedUsers.length ? 1 : 0)}
-            {" - "}
-            {(currentPage - 1) * PAGE_SIZE + paginatedUsers.length} de{" "}
-            {filteredUsers.length}
+        <div className='flex items-center justify-between px-4 py-3 border-t bg-gray-50'>
+          <p className='text-xs text-gray-600'>
+            Mostrando {(currentPage - 1) * PAGE_SIZE + (paginatedUsers.length ? 1 : 0)}
+            {' - '}
+            {(currentPage - 1) * PAGE_SIZE + paginatedUsers.length} de {filteredUsers.length}
           </p>
-          <div className="flex gap-2">
+          <div className='flex gap-2'>
             <button
               onClick={() => setPage((p) => Math.max(1, p - 1))}
               disabled={currentPage === 1}
-              className="px-3 py-1.5 rounded border bg-white text-sm disabled:opacity-50"
+              className='px-3 py-1.5 rounded border bg-white text-sm disabled:opacity-50'
             >
               Anterior
             </button>
-            <span className="px-2 py-1.5 text-sm text-gray-700">
+            <span className='px-2 py-1.5 text-sm text-gray-700'>
               {currentPage} / {totalPages}
             </span>
             <button
               onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
               disabled={currentPage === totalPages}
-              className="px-3 py-1.5 rounded border bg-white text-sm disabled:opacity-50"
+              className='px-3 py-1.5 rounded border bg-white text-sm disabled:opacity-50'
             >
               Siguiente
             </button>
