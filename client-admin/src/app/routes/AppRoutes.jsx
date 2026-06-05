@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { AuthPage } from '../../features/auth/pages/AuthPage.jsx';
-import {VerifyEmailPage} from '../../features/auth/pages/VerifyEmailPage.jsx';
 import { DashboardPage } from '../layouts/DashboardPage.jsx';
+import { VerifyEmailPage } from '../../features/auth/pages/VerifyEmailPage.jsx';
 import { ProtectedRoutes } from './ProtectedRoutes.jsx';
 import { UnauthorizedPage } from '../../features/auth/pages/UnauthorizedPage.jsx';
 import { Teams } from '../../features/teams/components/Teams.jsx';
@@ -29,8 +29,8 @@ export const AppRoutes = () => {
       >
         <Route path='fields' element={<Fields />} />
         <Route path='teams' element={<Teams />} />
-        <Route path='tournaments' element={<Tournaments />} />
         <Route path='reservations' element={<Reservations />} />
+        <Route path='tournaments' element={<Tournaments />} />
         <Route path='users' element={<Users />} />
       </Route>
     </Routes>

@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @theme {
   --color-main-blue: #08316d;
@@ -37,7 +37,7 @@
   position: relative;
 }
 .sidebar-underline.active::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 16px;
   right: 16px;

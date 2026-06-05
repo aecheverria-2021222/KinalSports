@@ -1,8 +1,12 @@
-import { create } from 'zustand';
-import { persist } from 'zustand/middleware';
-import { login as loginRequest, register as registerRequest } from '../../../shared/apis';
-import { showError } from '../../../shared/utils/toast.js';
-import { LoaderIcon } from 'react-hot-toast';
+import { create } from "zustand";
+import { persist } from "zustand/middleware";
+import {
+  login as loginRequest,
+  register as registerRequest,
+  forgotPassword as forgotPasswordRequest,
+  resetPassword as resetPasswordRequest,
+} from "../../../shared/api";
+import { showError } from "../../../shared/utils/toast.js";
 
 export const useAuthStore = create(
   persist(
@@ -15,21 +19,21 @@ export const useAuthStore = create(
       error: null,
       isLoadingAuth: true,
       isAuthenticated: false,
-      // Función para validar el token y el rol del usuario
       checkAuth: () => {
         const token = get().token;
         const role = get().user?.role;
-        const isAdmin = role === 'ADMIN_ROLE';
+        const isAdmin = role === "ADMIN_ROLE";
 
+        // Si hay token pero el rol no es admin, limpiamos la sesión.
         if (token && !isAdmin) {
           set({
             user: null,
             token: null,
             refreshToken: null,
             expiresAt: null,
-            isLoadingAuth: true,
             isAuthenticated: false,
-            error: 'No tienes permiso para acceder a esta aplicación',
+            isLoadingAuth: false,
+            error: "No tienes permisos para acceder como administrador.",
           });
           return;
         }
@@ -39,7 +43,7 @@ export const useAuthStore = create(
           isAuthenticated: Boolean(token) && isAdmin,
         });
       },
-      // Función para cerrar sesión
+
       logout: () => {
         set({
           user: null,
@@ -49,25 +53,24 @@ export const useAuthStore = create(
           isAuthenticated: false,
         });
       },
-      // Función para iniciar sesión
       login: async ({ emailOrUsername, password }) => {
         try {
           set({ loading: true, error: null });
-
           const { data } = await loginRequest({ emailOrUsername, password });
-          console.log(data);
 
+          // Sólo administradores pueden iniciar sesión en el client-admin.
           const role = data?.userDetails?.role;
-          if (role !== 'ADMIN_ROLE') {
-            const message = 'No tienes permiso para acceder a esta aplicación';
+          if (role !== "ADMIN_ROLE") {
+            const message =
+              "No tienes permisos para acceder como administrador.";
 
             set({
               user: null,
               token: null,
               refreshToken: null,
               expiresAt: null,
-              isLoadingAuth: true,
               isAuthenticated: false,
+              loading: false,
               error: message,
             });
 
@@ -77,22 +80,21 @@ export const useAuthStore = create(
 
           set({
             user: data.userDetails,
-            token: data.accessToken,
-            //token: data.token,
+            token: data.accessToken || data.token,
             refreshToken: data.refreshToken,
-            expiresAt: data.expiresIn,
-            //expiresAt: data.expiresAt,
+            expiresAt: data.expiresIn || data.expiresAt,
             isAuthenticated: true,
             loading: false,
           });
           return { success: true };
         } catch (err) {
-          const message = err.response?.data?.message || 'Error al iniciar sesión';
+          console.error("Login error:", err);
+          const message =
+            err.response?.data?.message || "Error de autenticación";
           set({ error: message, loading: false });
           return { success: false, error: message };
         }
       },
-
       register: async (formData) => {
         try {
           set({ loading: true, error: null });
@@ -101,14 +103,42 @@ export const useAuthStore = create(
           return {
             success: true,
             emailVerificationRequired: data?.emailVerificationRequired,
+            data,
           };
         } catch (err) {
-          const message = err.response?.data?.message || 'Error al Registar Usuario';
+          const message = err.response?.data?.message || "Error al registrarse";
           set({ error: message, loading: false });
           return { success: false, error: message };
         }
       },
+      forgotPassword: async (email) => {
+        try {
+          set({ loading: true, error: null });
+          const { data } = await forgotPasswordRequest(email);
+          set({ loading: false });
+          return { success: true, data };
+        } catch (err) {
+          const message =
+            err.response?.data?.message || "Error al enviar el correo";
+          set({ error: message, loading: false });
+          return { success: false, error: message };
+        }
+      },
+      resetPassword: async ({ token, newPassword }) => {
+        try {
+          set({ loading: true, error: null });
+          const { data } = await resetPasswordRequest(token, newPassword);
+          set({ loading: false });
+          return { success: true, data };
+        } catch (err) {
+          const message =
+            err.response?.data?.message || "Error al restablecer contraseña";
+          set({ error: message, loading: false });
+          return { success: false, error: message };
+        }
+      },
+      // ...rest of store logic
     }),
-    { name: 'auth-KS-IN6AM' }
-  )
+    { name: "auth-store" },
+  ),
 );

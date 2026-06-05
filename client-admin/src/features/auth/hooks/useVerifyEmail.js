@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import { verifyEmail as verifyEmailRequest } from '../../../shared/apis';
-import { showError, showSuccess } from '../../../shared/utils/toast.js';
+import { useState, useEffect } from "react";
+import { verifyEmail as verifyEmailRequest } from "../../../shared/api";
+import { showError, showSuccess } from "../../../shared/utils/toast.js";
 
 // Evita múltiples requests en React StrictMode (montaje doble).
 const verifyPromiseByToken = new Map();
@@ -9,22 +9,22 @@ const toastShownByToken = new Map();
 const finishCalledByToken = new Map();
 
 export const useVerifyEmail = (token, onSuccess) => {
-  const [status, setStatus] = useState('loading');
-  const [message, setMessage] = useState('');
+  const [status, setStatus] = useState("loading");
+  const [message, setMessage] = useState("");
 
   useEffect(() => {
     let isMounted = true;
 
     const run = async () => {
       if (!token) {
-        setStatus('error');
-        setMessage('Token inválido.');
-        if (!toastShownByToken.get('invalid-token')) {
-          showError('Token inválido.');
-          toastShownByToken.set('invalid-token', true);
+        setStatus("error");
+        setMessage("Token inválido.");
+        if (!toastShownByToken.get("invalid-token")) {
+          showError("Token inválido.");
+          toastShownByToken.set("invalid-token", true);
         }
-        if (!finishCalledByToken.get('invalid-token')) {
-          finishCalledByToken.set('invalid-token', true);
+        if (!finishCalledByToken.get("invalid-token")) {
+          finishCalledByToken.set("invalid-token", true);
           onSuccess && onSuccess();
         }
         return;
@@ -35,8 +35,8 @@ export const useVerifyEmail = (token, onSuccess) => {
       if (cached) {
         if (!toastShownByToken.get(token)) {
           toastShownByToken.set(token, true);
-          cached.status === 'success'
-            ? showSuccess('¡Correo verificado correctamente!')
+          cached.status === "success"
+            ? showSuccess("¡Correo verificado correctamente!")
             : showError(cached.message);
         }
         if (!finishCalledByToken.get(token)) {
@@ -57,28 +57,28 @@ export const useVerifyEmail = (token, onSuccess) => {
           .then((res) => {
             if (res.status === 200) {
               const successMessage =
-                'Tu correo ha sido verificado correctamente. Serás redirigido al login...';
+                "Tu correo ha sido verificado correctamente. Serás redirigido al login...";
               verifyResultByToken.set(token, {
-                status: 'success',
+                status: "success",
                 message: successMessage,
               });
-              return { status: 'success', message: successMessage };
+              return { status: "success", message: successMessage };
             }
 
-            const errorMessage = 'El enlace ha expirado o no es válido.';
+            const errorMessage = "El enlace ha expirado o no es válido.";
             verifyResultByToken.set(token, {
-              status: 'error',
+              status: "error",
               message: errorMessage,
             });
-            return { status: 'error', message: errorMessage };
+            return { status: "error", message: errorMessage };
           })
           .catch(() => {
-            const errorMessage = 'El enlace ha expirado o no es válido.';
+            const errorMessage = "El enlace ha expirado o no es válido.";
             verifyResultByToken.set(token, {
-              status: 'error',
+              status: "error",
               message: errorMessage,
             });
-            return { status: 'error', message: errorMessage };
+            return { status: "error", message: errorMessage };
           })
           .finally(() => {
             verifyPromiseByToken.delete(token);
@@ -96,8 +96,8 @@ export const useVerifyEmail = (token, onSuccess) => {
 
       if (!toastShownByToken.get(token)) {
         toastShownByToken.set(token, true);
-        result.status === 'success'
-          ? showSuccess('¡Correo verificado correctamente!')
+        result.status === "success"
+          ? showSuccess("¡Correo verificado correctamente!")
           : showError(result.message);
       }
 

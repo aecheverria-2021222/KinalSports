@@ -1,0 +1,11 @@
+[2026-06-05 07:44:57 INF] Checking database connection... {"SourceContext":"Program"}
+[2026-06-05 07:44:57 INF] Database ready. Running seed data... {"SourceContext":"Program"}
+[2026-06-05 07:44:58 INF] Database initialization completed successfully {"SourceContext":"Program"}
+[2026-06-05 07:44:58 INF] AuthService API is running at http://localhost:5001. Health endpoint: http://localhost:5001/health {"SourceContext":"Program"}
+[2026-06-05 07:48:22 INF] HTTP OPTIONS /api/v1/auth/login responded 204 in 2.6581 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNM314E1RJMP:00000001","ConnectionId":"0HNM314E1RJMP"}
+[2026-06-05 07:48:23 INF] User login succeeded {"EventId":{"Id":1002,"Name":"LogUserLoggedIn"},"SourceContext":"AuthService.Application.Services.AuthService","ActionId":"2c717f99-7e47-42f3-b9d3-5760debeef14","ActionName":"AuthService.Api.Controllers.AuthController.Login (AuthService.Api)","RequestId":"0HNM314E1RJMP:00000002","RequestPath":"/api/v1/auth/login","ConnectionId":"0HNM314E1RJMP"}
+[2026-06-05 07:48:23 INF] HTTP POST /api/v1/auth/login responded 200 in 665.8080 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNM314E1RJMP:00000002","ConnectionId":"0HNM314E1RJMP"}
+[2026-06-05 07:48:33 INF] HTTP OPTIONS /api/v1/auth/users responded 204 in 0.4568 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNM314E1RJMP:00000003","ConnectionId":"0HNM314E1RJMP"}
+[2026-06-05 07:48:33 INF] HTTP GET /api/v1/auth/users responded 200 in 111.4018 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNM314E1RJMP:00000004","ConnectionId":"0HNM314E1RJMP"}
+[2026-06-05 08:04:05 INF] HTTP OPTIONS /api/v1/auth/refresh responded 204 in 0.2529 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNM314E1RJMQ:00000001","ConnectionId":"0HNM314E1RJMQ"}
+[2026-06-05 08:04:05 INF] HTTP POST /api/v1/auth/refresh responded 200 in 58.1773 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNM314E1RJMQ:00000002","ConnectionId":"0HNM314E1RJMQ"}
