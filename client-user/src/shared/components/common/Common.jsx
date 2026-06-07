@@ -1,17 +1,20 @@
-// c:/gitIN6AM/KinalSports/client-user/src/shared/components/common/Common.jsx
+// c:\gitIN6AM\KinalSports\client-user\src\shared\components\common\Common.jsx
 import React from 'react';
 import { View, ActivityIndicator, Text, StyleSheet } from 'react-native';
-import { COLORS, SPACING, FONT_SIZE, SHADOWS } from '../../constants/theme.js';
+import { MaterialIcons } from '@expo/vector-icons';
+import { COLORS, SPACING, FONT_SIZE, SHADOWS } from '../../constants/theme';
 
-export const LoadingSpinner = () => (
-  <View style={[styles.center, styles.full]}>
-    <ActivityIndicator size="large" color={COLORS.primary} />
+export const LoadingSpinner = ({ size = 'large', color = COLORS.primary, style }) => (
+  <View style={[styles.centerContainer, style]}>
+    <ActivityIndicator size={size} color={color} />
   </View>
 );
 
-export const EmptyState = ({ message = "No hay datos disponibles" }) => (
-  <View style={[styles.center, styles.full, styles.emptyContainer]}>
-    <Text style={styles.emptyText}>{message}</Text>
+export const EmptyState = ({ icon = 'inbox', message = 'No hay datos disponibles', submessage }) => (
+  <View style={styles.centerContainer}>
+    <MaterialIcons name={icon} size={64} color={COLORS.secondary} />
+    <Text style={styles.emptyMessage}>{message}</Text>
+    {submessage && <Text style={styles.emptySubmessage}>{submessage}</Text>}
   </View>
 );
 
@@ -22,25 +25,30 @@ export const Card = ({ children, style }) => (
 );
 
 const styles = StyleSheet.create({
-  center: {
+  centerContainer: {
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-  },
-  full: {
-    flex: 1,
-  },
-  emptyContainer: {
     padding: SPACING.xl,
   },
-  emptyText: {
-    color: COLORS.textLight,
+  emptyMessage: {
     fontSize: FONT_SIZE.lg,
+    color: COLORS.text,
+    fontWeight: '600',
+    marginTop: SPACING.md,
+    textAlign: 'center',
+  },
+  emptySubmessage: {
+    fontSize: FONT_SIZE.sm,
+    color: COLORS.textLight,
+    marginTop: SPACING.sm,
     textAlign: 'center',
   },
   card: {
     backgroundColor: COLORS.surface,
-    borderRadius: 12,
+    borderRadius: 16,
     padding: SPACING.md,
-    ...SHADOWS.medium,
+    marginBottom: SPACING.md,
+    ...SHADOWS.small,
   }
 });

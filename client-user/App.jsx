@@ -1,15 +1,13 @@
-// c:/gitIN6AM/KinalSports/client-user/App.jsx
-import 'react-native-gesture-handler';
+// c:\gitIN6AM\KinalSports\client-user\App.jsx
 import React from 'react';
-import { StatusBar } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import AppNavigator from './src/navigation/AppNavigator.jsx';
-import { COLORS } from './src/shared/constants/theme.js';
+import { AppNavigator } from './src/navigation/AppNavigator.jsx';
 
 export default function App() {
   return (
     <SafeAreaProvider>
-      <StatusBar barStyle="dark-content" backgroundColor={COLORS.background} />
+      <StatusBar style="light" />
       <AppNavigator />
     </SafeAreaProvider>
   );

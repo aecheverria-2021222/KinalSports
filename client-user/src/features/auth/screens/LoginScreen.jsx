@@ -1,49 +1,51 @@
-// c:/gitIN6AM/KinalSports/client-user/src/features/auth/screens/LoginScreen.jsx
+// c:\gitIN6AM\KinalSports\client-user\src\features\auth\screens\LoginScreen.jsx
 import React from 'react';
-import { View, Text, StyleSheet, Image, KeyboardAvoidingView, Platform, ScrollView } from 'react-native';
+import { View, StyleSheet, Image, KeyboardAvoidingView, Platform, ScrollView, Alert } from 'react-native';
 import { useForm, Controller } from 'react-hook-form';
-import { useNavigation } from '@react-navigation/native';
+import { Input } from '../../../shared/components/common/Input.jsx';
+import { Button } from '../../../shared/components/common/Button.jsx';
 import { useAuth } from '../hooks/useAuth.js';
-import Input from '../../../shared/components/common/Input.jsx';
-import Button from '../../../shared/components/common/Button.jsx';
-import { COLORS, SPACING, FONT_SIZE } from '../../../shared/constants/theme.js';
+import { COLORS, SPACING } from '../../../shared/constants/theme.js';
 
-const LoginScreen = () => {
-  const { control, handleSubmit, formState: { errors } } = useForm();
-  const navigation = useNavigation();
+export const LoginScreen = ({ navigation }) => {
   const { handleLogin, loading, error } = useAuth();
+  const { control, handleSubmit, formState: { errors } } = useForm({
+    defaultValues: {
+      emailOrUsername: '',
+      password: ''
+    }
+  });
 
   const onSubmit = async (data) => {
-    await handleLogin(data);
+    const success = await handleLogin(data);
+    if (!success && error) {
+      Alert.alert('Error', error);
+    }
   };
 
   return (
     <KeyboardAvoidingView 
-      style={styles.container} 
+      style={styles.container}
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
     >
-      <ScrollView contentContainerStyle={styles.scrollContent}>
+      <ScrollView contentContainerStyle={styles.scrollContent} keyboardShouldPersistTaps="handled">
+        {/* Usamos un fallback si no existe el logo aún */}
         <View style={styles.logoContainer}>
-          <Image 
-            source={require('../../../../assets/kinal_sports.png')} 
-            style={styles.logo}
-            resizeMode="contain"
-            defaultSource={null}
-          />
-          <Text style={styles.title}>Bienvenido a KinalSports</Text>
+            <Image 
+              source={require('../../../../assets/icon.png')} // Usamos el icon default como logo temporal
+              style={styles.logo}
+              resizeMode="contain"
+            />
         </View>
 
         <View style={styles.formContainer}>
-          {error && <Text style={styles.errorText}>{error}</Text>}
-          
           <Controller
             control={control}
-            name="emailOrUsername"
             rules={{ required: 'Este campo es requerido' }}
             render={({ field: { onChange, onBlur, value } }) => (
               <Input
-                label="Correo o Usuario"
-                placeholder="Ingresa tu correo o usuario"
+                label="Email o Usuario"
+                placeholder="Ingresa tu email o usuario"
                 onBlur={onBlur}
                 onChangeText={onChange}
                 value={value}
@@ -51,23 +53,24 @@ const LoginScreen = () => {
                 autoCapitalize="none"
               />
             )}
+            name="emailOrUsername"
           />
 
           <Controller
             control={control}
-            name="password"
             rules={{ required: 'La contraseña es requerida' }}
             render={({ field: { onChange, onBlur, value } }) => (
               <Input
                 label="Contraseña"
-                placeholder="Ingresa tu contraseña"
-                secureTextEntry
+                placeholder="••••••••"
                 onBlur={onBlur}
                 onChangeText={onChange}
                 value={value}
                 error={errors.password?.message}
+                secureTextEntry
               />
             )}
+            name="password"
           />
 
           <Button 
@@ -77,15 +80,12 @@ const LoginScreen = () => {
             style={styles.loginButton}
           />
 
-          <View style={styles.registerContainer}>
-            <Text style={styles.registerText}>¿No tienes cuenta? </Text>
-            <Text 
-              style={styles.registerLink} 
-              onPress={() => navigation.navigate('Register')}
-            >
-              Regístrate aquí
-            </Text>
-          </View>
+          <Button 
+            title="¿No tienes cuenta? Regístrate" 
+            variant="secondary"
+            onPress={() => navigation.navigate('Register')} 
+            disabled={loading}
+          />
         </View>
       </ScrollView>
     </KeyboardAvoidingView>
@@ -100,45 +100,21 @@ const styles = StyleSheet.create({
   scrollContent: {
     flexGrow: 1,
     justifyContent: 'center',
-    padding: SPACING.lg,
+    padding: SPACING.xl,
   },
   logoContainer: {
     alignItems: 'center',
-    marginBottom: SPACING.xl,
+    marginBottom: SPACING.xxl,
   },
   logo: {
     width: 150,
     height: 150,
-    marginBottom: SPACING.md,
-  },
-  title: {
-    fontSize: FONT_SIZE.xl,
-    fontWeight: 'bold',
-    color: COLORS.primary,
   },
   formContainer: {
     width: '100%',
   },
-  errorText: {
-    color: COLORS.error,
-    marginBottom: SPACING.md,
-    textAlign: 'center',
-  },
   loginButton: {
     marginTop: SPACING.md,
-  },
-  registerContainer: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    marginTop: SPACING.lg,
-  },
-  registerText: {
-    color: COLORS.textLight,
-  },
-  registerLink: {
-    color: COLORS.primary,
-    fontWeight: 'bold',
+    marginBottom: SPACING.sm,
   }
 });
-
-export default LoginScreen;

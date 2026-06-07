@@ -1,6 +1,6 @@
-// c:/gitIN6AM/KinalSports/client-user/src/features/fields/hooks/useFields.js
+// c:\gitIN6AM\KinalSports\client-user\src\features\fields\hooks\useFields.js
 import { useState, useCallback, useEffect } from 'react';
-import userClient from '../../../shared/api/userClient.js';
+import { userClient } from '../../../shared/api/userClient.js';
 
 export const useFields = () => {
   const [fields, setFields] = useState([]);
@@ -13,16 +13,19 @@ export const useFields = () => {
     try {
       const response = await userClient.get('/fields');
       const data = response.data?.data || response.data || [];
-      const mappedFields = data.map(field => ({
-        ...field,
-        name: field.fieldName || field.name,
-        image: field.photo || field.image,
-        location: `${field.fieldType || ''} • ${field.capacity || ''}`,
-        isAvailable: Boolean(field.isActive)
+      
+      const normalizedFields = data.map(item => ({
+        ...item,
+        id: item._id || item.id,
+        name: item.fieldName,
+        image: item.photo,
+        location: `${item.fieldType} • ${item.capacity}`,
+        isAvailable: Boolean(item.isActive)
       }));
-      setFields(mappedFields);
+      
+      setFields(normalizedFields);
     } catch (err) {
-      setError(err.response?.data?.message || 'Error al obtener las canchas');
+      setError(err.response?.data?.message || 'Error al cargar las canchas');
     } finally {
       setLoading(false);
     }

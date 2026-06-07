@@ -1,16 +1,18 @@
-// c:/gitIN6AM/KinalSports/client-user/src/navigation/AppNavigator.jsx
+// c:\gitIN6AM\KinalSports\client-user\src\navigation\AppNavigator.jsx
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
+import { AuthStack } from './AuthStack.jsx';
+import { MainTabs } from './MainTabs.jsx';
 import { useAuthStore } from '../shared/store/authStore.js';
 import { LoadingSpinner } from '../shared/components/common/Common.jsx';
-import AuthStack from './AuthStack.jsx';
-import MainTabs from './MainTabs.jsx';
+import { COLORS } from '../shared/constants/theme.js';
 
-const AppNavigator = () => {
-  const { isAuthenticated, _hasHydrated } = useAuthStore();
+export const AppNavigator = () => {
+  const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
+  const _hasHydrated = useAuthStore((state) => state._hasHydrated);
 
   if (!_hasHydrated) {
-    return <LoadingSpinner />;
+    return <LoadingSpinner style={{ backgroundColor: COLORS.background }} />;
   }
 
   return (
@@ -19,5 +21,3 @@ const AppNavigator = () => {
     </NavigationContainer>
   );
 };
-
-export default AppNavigator;
